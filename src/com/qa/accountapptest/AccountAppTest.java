@@ -45,16 +45,11 @@ public class AccountAppTest {
 	
 	@Test
 	public void testNameAccount() {
-
-
 		service hmap = new service();
 		hmap.addAccount("Daniel", "Olugbade", 144044);
 		hmap.addAccount("Daniel", "Smith", 144045);
 		hmap.addAccount("George", "Brown", 144046);
 		assertEquals("Not accounted correctly", 2, hmap.countFirstName("Daniel"));
-		
-		
-		
 	}
 
 }
