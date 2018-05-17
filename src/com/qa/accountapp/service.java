@@ -31,6 +31,15 @@ public class service {
 	{
 		return map;
 	}
+
+	public int countFirstName(String nameToCount) {
+		
+		
+		return (int) map.entrySet().stream()
+				.filter(x -> x.getValue().getFirstName()
+						.equals(nameToCount)).count();		
+		
+	}
 	
 	
 
