@@ -29,8 +29,6 @@ public class AccountAppTest {
 		hmap.removeAccount(0);
 		assertEquals("Account not removed", null, hmap.getAccounts().get(0));
 		
-		
-		
 	}
 	
 	@Test
@@ -41,6 +39,19 @@ public class AccountAppTest {
 		hmap.addAccount("Daniel", "Olugbade", 144044);
 		hmap.removeAccount(0);
 		assertEquals("List is not empty", null, hmap.getAccounts().get(0));
+		
+		
+	}
+	
+	@Test
+	public void testNameAccount() {
+
+
+		service hmap = new service();
+		hmap.addAccount("Daniel", "Olugbade", 144044);
+		hmap.addAccount("Daniel", "Smith", 144045);
+		hmap.addAccount("George", "Brown", 144046);
+		assertEquals("Not accounted correctly", 2, hmap.countFirstName("Daniel"));
 		
 		
 		
